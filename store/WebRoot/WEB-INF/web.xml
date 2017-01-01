@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<!-- 全站 参数编码配置 -->
+	<context-param>
+		<param-name>encode</param-name>
+		<param-value>utf-8</param-value>
+	</context-param>
+	
+	<!-- 全局友好错误页面提示 -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error/404.jsp</location>
+	</error-page>
+	
+	<!-- 监听器配置 -->
+	<listener>
+		<listener-class>com.tjrac.listener.MyHSessionListener</listener-class>
+	</listener>
+	
+	
+	<!-- 过滤器配置 -->
+	<filter>
+		<filter-name>EncodeFilter</filter-name>
+		<filter-class>com.tjrac.filter.EncodeFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncodeFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>ValiImg</servlet-name>
+		<servlet-class>com.tjrac.web.ValiImg</servlet-class>
+	</servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.tjrac.web.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.tjrac.web.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.tjrac.web.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ProdListServlet</servlet-name>
+    <servlet-class>com.tjrac.web.ProdListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ProdInfoServlet</servlet-name>
+    <servlet-class>com.tjrac.web.ProdInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddCarServlet</servlet-name>
+    <servlet-class>com.tjrac.web.AddCarServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelCarServlet</servlet-name>
+    <servlet-class>com.tjrac.web.DelCarServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChangeCarServlet</servlet-name>
+    <servlet-class>com.tjrac.web.ChangeCarServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClearCarServlet</servlet-name>
+    <servlet-class>com.tjrac.web.ClearCarServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddOrderServlet</servlet-name>
+    <servlet-class>com.tjrac.web.AddOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderListServlet</servlet-name>
+    <servlet-class>com.tjrac.web.OrderListServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>ValiImg</servlet-name>
+		<url-pattern>/ValiImg</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProdListServlet</servlet-name>
+    <url-pattern>/ProdListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProdInfoServlet</servlet-name>
+    <url-pattern>/ProdInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCarServlet</servlet-name>
+    <url-pattern>/AddCarServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelCarServlet</servlet-name>
+    <url-pattern>/DelCarServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeCarServlet</servlet-name>
+    <url-pattern>/ChangeCarServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClearCarServlet</servlet-name>
+    <url-pattern>/ClearCarServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddOrderServlet</servlet-name>
+    <url-pattern>/AddOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderListServlet</servlet-name>
+    <url-pattern>/OrderListServlet</url-pattern>
+  </servlet-mapping>
+	
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
