@@ -16,5 +16,13 @@ public interface ProductDao {
 	 * @param buynum
 	 */
 	public void delPnum(String product_id, Integer buynum);
+	
+	
+	/**
+	 * ¼Ó»Ø¿â´æ
+	 * @param product_id
+	 * @param buynum
+	 */
+	public void addPnum(String product_id, Integer buynum);
 
 }

@@ -1,6 +1,5 @@
 package com.tjrac.service;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -76,6 +75,33 @@ public class OrderServiceImpl implements OrderService{
 		}
 		
 		
+	}
+
+	@Override
+	public void delOrderById(String id) {
+		//根据id查询所有订单项
+		List<OrderItem> list =  orderDao.findOrderItems(id);
+		
+		//遍历订单项  将对应的商品id的库存加回去
+		for(OrderItem item : list){
+			prodDao.addPnum(item.getProduct_id(), item.getBuynum());
+		}
+		
+		//删除订单项
+		orderDao.delOrderItem(id);
+		
+		//删除订单
+		orderDao.delOrder(id);
+	}
+
+	@Override
+	public Order findOrderById(String p2_Order) {
+		return orderDao.findById(p2_Order);
+	}
+
+	@Override
+	public void changePayState(String r6_Order, int i) {
+		orderDao.changePayState(r6_Order, i);
 	}
 
 }

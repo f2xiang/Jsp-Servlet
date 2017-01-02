@@ -51,4 +51,15 @@ public class ProductDaoImpl implements ProductDao{
 		}
 	}
 
+	@Override
+	public void addPnum(String product_id, Integer buynum) {
+		String sql = "update products set pnum = pnum + ? where id = ? ";
+		try {
+			QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
+			runner.update(sql, buynum, product_id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
 }

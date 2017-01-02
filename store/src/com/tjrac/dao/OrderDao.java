@@ -28,4 +28,30 @@ public interface OrderDao {
 	 */
 	List<OrderItem> findOrderItems(String id);
 
+	/**
+	 * 删除指定订单id关联的所有订单项
+	 * @param id
+	 */
+	void delOrderItem(String id);
+
+	/**
+	 * 删除指定id的订单
+	 * @param id
+	 */
+	void delOrder(String id);
+
+	/**
+	 * 根据id查找订单
+	 * @param p2_Order
+	 * @return
+	 */
+	Order findById(String p2_Order);
+
+	/**
+	 * 修改订单的支付状态
+	 * @param r6_Order
+	 * @param i
+	 */
+	void changePayState(String r6_Order, int i);
+
 }

@@ -85,6 +85,21 @@
     <servlet-name>OrderListServlet</servlet-name>
     <servlet-class>com.tjrac.web.OrderListServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>DelOrderServlet</servlet-name>
+    <servlet-class>com.tjrac.web.DelOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PayServlet</servlet-name>
+    <servlet-class>com.tjrac.web.PayServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CallBack</servlet-name>
+    <servlet-class>com.tjrac.web.CallBack</servlet-class>
+  </servlet>
+
+
+
 
 
 
@@ -143,6 +158,18 @@
   <servlet-mapping>
     <servlet-name>OrderListServlet</servlet-name>
     <url-pattern>/OrderListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelOrderServlet</servlet-name>
+    <url-pattern>/DelOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PayServlet</servlet-name>
+    <url-pattern>/PayServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CallBack</servlet-name>
+    <url-pattern>/CallBack</url-pattern>
   </servlet-mapping>
 	
   <display-name></display-name>	

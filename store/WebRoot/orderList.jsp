@@ -17,6 +17,8 @@
    		支付状态:   
    	   <c:if test="${olf.paystate == 0}">
    	   		<font color="red">未支付</font>
+   	   		<a href="DelOrderServlet?id=${olf.id }">订单删除</a>
+   	   		<a href="pay.jsp?id=${olf.id }&money=${olf.money }">在线支付</a>
    	   </c:if>		 <br>
    	   <c:if test="${olf.paystate != 0}">
    	   		<font color="blue">已支付</font>
@@ -38,7 +40,7 @@
    				<tr>
    					<td>${entry.key.name }</td>
    					<td>${entry.key.category }</td>
-   					<td>${entry.key.pnum }</td>
+   					<td>${entry.value }</td>
    					<td>${entry.key.price }</td>
    					<td>${entry.key.price * entry.value}</td>
    				</tr>
