@@ -1,5 +1,7 @@
 package com.fx.service.impl;
 
+import java.util.List;
+
 import com.fx.beans.User;
 import com.fx.dao.UserDao;
 import com.fx.dao.impl.UserDaoImpl;
@@ -20,5 +22,42 @@ public class UserServiceImpl implements UserService{
 		user.setNewPassword(MD5Utils.md5(user.getNewPassword()));
 		this.userDao.updatePwd(user);
 	}
+
+	@Override
+	public User findByUname(String uname) {
+		return this.userDao.findByUname(uname);
+	}
+
+	@Override
+	public List<User> findAll() {
+		return this.userDao.findAll();
+	}
+
+	@Override
+	public boolean addUser(String uname, String pwd) {
+		User user = this.userDao.findByUname(uname);
+		if(user == null || "".equals(user)){
+			this.userDao.addUser(uname, MD5Utils.md5(pwd));
+			return true;
+		}else{
+			return false;
+		}
+		
+		
+	}
+
+	@Override
+	public void delStaff(Integer uid) {
+		this.userDao.delStaff(uid);
+	}
+
+	@Override
+	public User findByUid(Integer uid) {
+		return this.userDao.findByUid(uid);
+	}
+
+	
+
+	
 
 }

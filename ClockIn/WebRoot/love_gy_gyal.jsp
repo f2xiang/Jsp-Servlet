@@ -6,12 +6,7 @@
 <title>Caprice</title>
 <link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="style.css" media="all" />
-<link href='http://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' 
 
-type='text/css'>
-<link href='http://fonts.googleapis.com/css?
-
-family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript" src="style/js/jquery-1.6.4.min.js"></script>
 <script type="text/javascript" src="style/js/ddsmoothmenu.js"></script>
@@ -28,7 +23,9 @@ family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'
 <div id="wrapper">
 	<!-- Begin Sidebar -->
 	<div id="sidebar">
-		 <div id="logo">  　　<img src="image/xiaoren10.png" width="120" height="143"></div>
+		 <div id="logo">  　
+		 　<a href="upLogo.jsp"><img src="image/xiaoren10.png" width="120" height="143" style="cursor: pointer;"></a>
+		 </div>
 		 
 	<!-- Begin Menu -->
     <div id="menu" class="menu-v">
@@ -38,7 +35,7 @@ family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'
         <li><a>员工管理</a>
         	<ul>
         		<li><a href="addStaff.jsp" target="centeriframe">添加员工</a></li>
-        		<li><a href="staffList.jsp" target="centeriframe">员工管理</a></li>
+        		<li><a href="user.do?uid=6" target="centeriframe">员工管理</a></li>
         	</ul>
         </li>
         <li><a>考勤管理</a>
@@ -113,11 +110,6 @@ alt="LinkedIn" /></a></li>
 <script type="text/javascript" src="style/js/scripts.js"></script>
 <!--[if !IE]> -->
 <script type="text/javascript" src="style/js/jquery.corner.js"></script>
-<!-- <![endif]-->
-<div style="display:none"><script src='http://v7.cnzz.com/stat.php?
 
-id=155540&web_id=155540' language='JavaScript' 
-
-charset='gb2312'></script></div>
 </body>
 </html>

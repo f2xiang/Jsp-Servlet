@@ -6,12 +6,7 @@
 <title>Caprice</title>
 <link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="style.css" media="all" />
-<link href='http://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' 
 
-type='text/css'>
-<link href='http://fonts.googleapis.com/css?
-
-family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript" src="style/js/jquery-1.6.4.min.js"></script>
 <script type="text/javascript" src="style/js/ddsmoothmenu.js"></script>
@@ -49,7 +44,7 @@ family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'
       <li><a>系统管理</a>
         	<ul>
         		<li><a href="changePassword.jsp"target="centeriframe">修改密码</a></li>
-        		<li><a href="emp/changePassword.jsp"target="centeriframe">设置密码问题</a></li>
+        		<li><a href="question.do?qid=1"target="centeriframe">设置密码问题</a></li>
         	</ul>
         	 <li><a href="user.do?uid=2" class="active">退出</a>
         </li>
@@ -106,11 +101,6 @@ alt="LinkedIn" /></a></li>
 <script type="text/javascript" src="style/js/scripts.js"></script>
 <!--[if !IE]> -->
 <script type="text/javascript" src="style/js/jquery.corner.js"></script>
-<!-- <![endif]-->
-<div style="display:none"><script src='http://v7.cnzz.com/stat.php?
 
-id=155540&web_id=155540' language='JavaScript' 
-
-charset='gb2312'></script></div>
 </body>
 </html>

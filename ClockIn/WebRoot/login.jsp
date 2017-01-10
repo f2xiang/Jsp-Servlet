@@ -45,10 +45,11 @@
     				<td width="150" height="40"><input type="password" name="pwd"></td>
     			</tr>
     			<tr>
-   				  <td></td>
+    			<td> </td>
     				<td width="150" height="40"><input type="submit" value="登陆">
     				  &nbsp;  &nbsp; &nbsp;
     				  <input type="reset" value="重置"></td>
+    				<td>   <a href="pwdBack.jsp">找回密码</a></td>
     			</tr>
     		</table>
     	</form>

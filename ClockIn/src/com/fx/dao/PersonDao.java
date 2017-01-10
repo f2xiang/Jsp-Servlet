@@ -18,4 +18,24 @@ public interface PersonDao {
 	 * @param person
 	 */
 	public void updatePerson(Person person);
+
+	/**
+	 * 添加一条个人信息
+	 * @param person
+	 */
+	public void addPerson(Person person);
+	
+	/**
+	 * 管理员更新员工信息
+	 * @param person
+	 */
+	public void updatePerson1(Person person);
+
+	/**
+	 * 多条件查询
+	 * @param condition
+	 * @param array
+	 * @return
+	 */
+	public List<Person> findAll(String condition, Object[] array);
 }

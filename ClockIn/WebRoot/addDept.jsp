@@ -11,7 +11,7 @@
   <fieldset style="width: 60%">
   		<legend>添加部门</legend>
   		<div align="center">
-  			${msg }
+  			${msg }<br>
 	    	<form action="dept.do?did=1" method="post">
 	    		部门名称：<input type="text" name="dname" value="${param.dname }">
 	    		<input type="submit" value="添加">

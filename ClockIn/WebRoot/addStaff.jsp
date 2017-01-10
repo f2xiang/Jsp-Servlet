@@ -9,15 +9,11 @@
   <body>
     <fieldset>
     	<legend>添加员工</legend>
-    	<form action="#" method="post">
-    		姓名：<input type="text" name="name" > <br>
-    		年龄：<input type="text" name="age" > <br>
-    		薪水：<input type="text" name="sal" > <br>
-    		部门：<input type="text" name="dname" > <br>
-    		生日：<input type="text" name="birth" > <br>
-    		手机：<input type="text" name="phone" > <br>
-    		地址：<input type="text" name="address" > <br>
-    		<input type="text" value="添加">
+    	<form action="user.do?uid=7" method="post">
+    		${msg } <br>
+    		账号：<input type="text" name="uname" > <br>
+    		密码：<input type="password" name="pwd" > <br>
+    		<input type="submit" value="添加">
     	</form>
     </fieldset>
   </body>
