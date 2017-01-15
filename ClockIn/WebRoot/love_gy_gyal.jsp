@@ -25,6 +25,7 @@
 	<div id="sidebar">
 		 <div id="logo">  　
 		 　<a href="upLogo.jsp"><img src="image/xiaoren10.png" width="120" height="143" style="cursor: pointer;"></a>
+		<p style="color: red" align="center">点我改头像</p>
 		 </div>
 		 
 	<!-- Begin Menu -->
@@ -35,12 +36,12 @@
         <li><a>员工管理</a>
         	<ul>
         		<li><a href="addStaff.jsp" target="centeriframe">添加员工</a></li>
-        		<li><a href="user.do?uid=6" target="centeriframe">员工管理</a></li>
+        		<li><a href="user.do?uid=6&currentPage=1" target="centeriframe">员工管理</a></li>
         	</ul>
         </li>
         <li><a>考勤管理</a>
         	<ul>
-        		<li><a href="user/selectAttendace.jsp"target="centeriframe">考勤信息查询</a></li>
+        		<li><a href="check.do?cid=3"target="centeriframe">考勤信息查询</a></li>
         	</ul>
         </li>
         <li><a>信息管理</a>

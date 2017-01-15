@@ -3,6 +3,7 @@ package com.fx.dao;
 import java.util.List;
 
 import com.fx.beans.User;
+import com.fx.utils.Page;
 
 public interface UserDao {
 
@@ -52,5 +53,12 @@ public interface UserDao {
 	 * @return
 	 */
 	public User findByUid(Integer uid);
+
+	/**
+	 * ·ÖÒ³
+	 * @param page
+	 * @return
+	 */
+	public List<User> findAll(Page page);
 
 }

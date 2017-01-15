@@ -7,6 +7,7 @@ import com.fx.dao.UserDao;
 import com.fx.dao.impl.UserDaoImpl;
 import com.fx.service.UserService;
 import com.fx.utils.MD5Utils;
+import com.fx.utils.Page;
 
 public class UserServiceImpl implements UserService{
 
@@ -54,6 +55,11 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public User findByUid(Integer uid) {
 		return this.userDao.findByUid(uid);
+	}
+
+	@Override
+	public List<User> findAll(Page page) {
+		return this.userDao.findAll(page);
 	}
 
 	

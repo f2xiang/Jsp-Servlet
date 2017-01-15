@@ -23,7 +23,14 @@
 			
 			return true;
 		}
+		
+		function changeImg(img){
+  			img.src = img.src+"?time="+new Date().getTime();
+  		}
 	</script>
+	
+  	
+
   </head>
   
   <body style="background-image: url('image/ymbj.jpg');margin: 0px auto;text-align: center">
@@ -45,11 +52,17 @@
     				<td width="150" height="40"><input type="password" name="pwd"></td>
     			</tr>
     			<tr>
+   				  <td>验证码:</td>
+    				<td width="150" height="40"><input type="text" name="vali"></td>
+    			<td>	<img src="${pageContext.request.contextPath }/ValiImg" style="cursor: pointer" onclick="changeImg(this)"/></td>
+    			</tr>
+    			<tr>
     			<td> </td>
     				<td width="150" height="40"><input type="submit" value="登陆">
     				  &nbsp;  &nbsp; &nbsp;
     				  <input type="reset" value="重置"></td>
     				<td>   <a href="pwdBack.jsp">找回密码</a></td>
+    				
     			</tr>
     		</table>
     	</form>

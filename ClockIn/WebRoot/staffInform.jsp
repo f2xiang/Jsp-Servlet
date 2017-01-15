@@ -3,10 +3,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-
-<script type="text/javascript" src="My97DatePicker/WdatePicker.js">
-</script>  
-
+	<script type="text/javascript" src="My97DatePicker/WdatePicker.js">
+	</script>  
   </head>
   
   <body>
@@ -14,7 +12,7 @@
    		<legend>员工信息</legend>
    		
    		<form action="person.do?pid=4" method="post">
-   			<input type="hidden" name="p_id" value="${requestScope.map.p_id }">
+   			   <input type="hidden" name="p_id" value="${requestScope.map.p_id }">
    			
    			 姓名:<input type="text" name="name" value="${requestScope.map.name }"> <br><br>
    			
@@ -23,10 +21,12 @@
 	   					<c:if test="${dept.dname == requestScope.map.dname}">
 	   						<option  value="${dept.d_id }" selected="selected">${dept.dname }</option>
 	   					</c:if>
-	   						<option value="${dept.d_id }" >${dept.dname }</option>
+	   					<c:if test="${dept.dname != requestScope.map.dname}">
+	   						<option  value="${dept.d_id }" >${dept.dname }</option>
+	   					</c:if>
 	   				</c:forEach>
    				</select>
-   			<br><br>
+   			  <br><br>
    			
    			年纪：<input type="text" name="age" value="${requestScope.map.age } ">  <br><br>
    			生日：<input type="text" name="bir" class="Wdate" onfocus="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd',readOnly:true})" value="${requestScope.map.birth }">  <br><br>

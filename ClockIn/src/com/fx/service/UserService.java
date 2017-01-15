@@ -3,6 +3,7 @@ package com.fx.service;
 import java.util.List;
 
 import com.fx.beans.User;
+import com.fx.utils.Page;
 
 
 
@@ -56,5 +57,10 @@ public interface UserService {
 	 */
 	public User findByUid(Integer uid);
 
-	
+	/**
+	 * ·ÖÒ³
+	 * @param page
+	 * @return
+	 */
+	public List<User> findAll(Page page);
 }

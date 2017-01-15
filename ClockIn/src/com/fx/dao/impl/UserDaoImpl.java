@@ -10,6 +10,7 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 import com.fx.beans.User;
 import com.fx.dao.UserDao;
 import com.fx.utils.JDBCUtils;
+import com.fx.utils.Page;
 
 public class UserDaoImpl implements UserDao{
 
@@ -90,6 +91,18 @@ public class UserDaoImpl implements UserDao{
 		try {
 			QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
 			return runner.query(sql, new BeanHandler<User>(User.class), uid);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException();
+		}
+	}
+
+	@Override
+	public List<User> findAll(Page page) {
+		String sql = "select * from user where level = ? limit ?, ? ";
+		try {
+			QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
+			return runner.query(sql, new BeanListHandler<User>(User.class), 2, page.getBeginIndex(), page.getEveryPage());
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException();

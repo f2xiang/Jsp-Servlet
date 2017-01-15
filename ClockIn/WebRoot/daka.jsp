@@ -17,9 +17,12 @@
 		  		 <input type="submit" style="width:100%;height: 100%; font-size: 100; color: red;" value="上班">
 		  	  </form>
 		  	</td>
-		   <td width="60%">这是上班打卡<br>
+		    <td width="60%">
+		    	<p>	欢迎来上班 请打卡 <p> <br>
+		    	<p> ${requestScope.work }</p>
 		    </td>
 	   </tr>
+	   
     </table>
   </fieldset>
   <hr>
@@ -32,7 +35,9 @@
   		 <input type="submit" style="width:100%;height: 100%; font-size: 100; color: red;" value="下班">
    </form>
    </td>
-    <td width="60%">这是下班打卡<br>
+    <td width="60%">
+    	<p>辛苦了 回家睡觉把   请打卡</p> <br>
+    	<p> ${requestScope.home }</p>
       </td>
    </tr>
     </table>

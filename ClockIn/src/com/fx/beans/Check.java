@@ -9,7 +9,7 @@ public class Check implements Serializable{
 	private String hometime;
 	private String hometype;
 	private String worktype;
-	private Integer p_id;
+	private Integer u_id;
 	
 	
 	public Integer getC_id() {
@@ -44,11 +44,11 @@ public class Check implements Serializable{
 	public void setWorktype(String worktype) {
 		this.worktype = worktype;
 	}
-	public Integer getP_id() {
-		return p_id;
+	public Integer getU_id() {
+		return u_id;
 	}
-	public void setP_id(Integer p_id) {
-		this.p_id = p_id;
+	public void setu_id(Integer u_id) {
+		this.u_id = u_id;
 	}
 	
 	

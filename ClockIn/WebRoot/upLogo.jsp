@@ -11,8 +11,9 @@
   <fieldset>
   	<legend>修改头像</legend>
   	
-   	<form action="" >
-   		请选择头像：<input type="file" name=""> <input type="submit" value="上传">
+   	<form action="user.do?uid=10" method="post" enctype="multipart/form-data">
+   		请选择头像：<input type="file" name="logo">
+   		 <input type="submit" value="上传">
    	</form>
   	
   </fieldset>

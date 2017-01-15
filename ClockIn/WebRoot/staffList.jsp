@@ -18,7 +18,9 @@
    					<c:if test="${dept.d_id == param.d_id }">
    						<option value="${dept.d_id }" selected="selected">${dept.dname }</option>
    					</c:if>
-   					<option value="${dept.d_id }">${dept.dname }</option>
+   					<c:if test="${dept.d_id != param.d_id }">
+   						<option value="${dept.d_id }" >${dept.dname }</option>
+   					</c:if>
    				</c:forEach>
    			</select>
    			<input type="submit" value="查询">
@@ -35,6 +37,33 @@
    			<hr>
    		</c:forEach>
    		
+   		<!--  
+   		<div align="center">
+			<c:choose>
+				<c:when test="${page.hasPrePage}">
+					<a href="user.do?uid=6&currentPage=1">首页</a> | 
+					<a href="user.do?uid=6&currentPage=${page.currentPage -1 }">上一页</a>
+				</c:when>
+				<c:otherwise>
+					首页 | 上一页
+				</c:otherwise>
+			</c:choose>
+			<c:choose>
+				<c:when test="${page.hasNextPage}">
+					<a href="user.do?uid=6&currentPage=${page.currentPage + 1 }">下一页</a> | 
+					<a href="user.do?uid=6&currentPage=${page.totalPage }">尾页</a>
+				</c:when>
+				<c:otherwise>
+					下一页 | 尾页
+				</c:otherwise>
+			</c:choose>
+			当前为第${page.currentPage}页,共${page.totalPage}页
+  	</div>    -->
+   		
+   		
+   		
+   		<hr>
+   		
    		
    		<c:forEach items="${requestScope.personlist }" var="person">
 	   		 姓名:${person.name } 
@@ -46,8 +75,7 @@
    			<hr>
    		</c:forEach>
    		
-   		
-   		
+   	
    		
    	</fieldset>
   </body>
